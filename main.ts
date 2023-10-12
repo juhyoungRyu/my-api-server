@@ -6,6 +6,9 @@ dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 5000;
+const testDb: any = { datas: [] };
+
+export { testDb };
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Api Server Start");
@@ -16,4 +19,4 @@ app.listen(port, () => {
 });
 
 app.use(express.json());
-app.use("/data", dataApi);
+app.use("/datas", dataApi);
