@@ -86,7 +86,7 @@ dataApi.post("/delete", (req: Request, res: Response) => {
 
 
   for (let i = 0; i < datas.length; i++) {
-    if (datas[i].id === req.body.id) {
+    if (datas[i].id === req.body.id[0]) {
       datas.splice(i, 1);
       break;
     }
